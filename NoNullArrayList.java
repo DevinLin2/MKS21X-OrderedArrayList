@@ -11,6 +11,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
       throw new IllegalArgumentException("Value null cannot be added to ArrayList");
     }else{
       super.add(value);
+      return true;
     }
   }
   public void add(int index, T value){
@@ -25,6 +26,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
       throw new IllegalArgumentException("Value null cannot be set to ArrayList");
     }else{
       super.set(index, value);
+      return value;
     }
   }
 }
